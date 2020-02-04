@@ -5,13 +5,11 @@ mongo:
     ports:
         - "27017:27017"
     command: --auth
-
     container_name: "db_mongodb"
 
 data:
     image: mongo:latest
     volumes:
         - /var/lib/mongo
-        - ./setup:/setup
     command: "true"
     container_name: "db_mongodb_data"
